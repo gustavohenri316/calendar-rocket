@@ -1,10 +1,29 @@
 {
   "experts": [
     {
-      "name": "Gustavo",
-      "email": "gustavo@gmail.com",
-      "id": 4
+      "name": "Gustavo Henrique",
+      "email": "gustavohenri316@icloud.com",
+      "id": 1
     }
   ],
-  "schedules": []
+  "schedules": [
+    {
+      "title": "teste",
+      "date": "2023-03-22",
+      "initTime": "11:26",
+      "endTime": "12:26",
+      "description": null,
+      "expertsId": 1,
+      "id": 1
+    },
+    {
+      "title": "ferfger",
+      "date": "2023-03-22",
+      "initTime": "15:30",
+      "endTime": "17:04",
+      "description": "ewewewew",
+      "expertsId": 1,
+      "id": 2
+    }
+  ]
 }

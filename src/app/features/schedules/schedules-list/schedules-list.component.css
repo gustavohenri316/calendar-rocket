@@ -55,3 +55,16 @@
 .end {
     justify-content: end;
 }
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.close {
+    border: none;
+    background: transparent;
+    font-size: 1.125rem;
+    font-weight: bold;
+}

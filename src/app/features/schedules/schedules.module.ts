@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule, registerLocaleData } from '@angular/common';
-
+import { DragDropModule } from '@angular/cdk/drag-drop';
 import { SchedulesRoutingModule } from './schedules-routing.module';
 import { SchedulesEditComponent } from './schedules-edit/schedules-edit.component';
 import { SchedulesListComponent } from './schedules-list/schedules-list.component';
@@ -24,7 +24,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     CommonModule,
     ReactiveFormsModule,
+    DragDropModule,
     SchedulesRoutingModule,
+    
 
     CalendarModule.forRoot({
       provide: DateAdapter,

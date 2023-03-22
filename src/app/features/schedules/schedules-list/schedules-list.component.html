@@ -4,65 +4,52 @@
             <i class="fa-solid fa-plus"></i>
         </a>
     </div>
-
     <div class="content">
         <h3>{{ viewDate | calendarDate:(view + 'ViewTitle') }}</h3>
     </div>
-
     <div class="button-grup">
         <div class="button-grup">
             <div class="button-grup">
-                <button  (click)="setView(CalendarView.Month)" [ngClass]="view === CalendarView.Month ? ' btn-purple' : ' btn-outline-purple'">
+                <button (click)="setView(CalendarView.Month)"
+                    [ngClass]="view === CalendarView.Month ? ' btn-purple' : ' btn-outline-purple'">
                     Month
                 </button>
-                <button  (click)="setView(CalendarView.Week)" [ngClass]="view === CalendarView.Week ? ' btn-purple' : ' btn-outline-purple'">
+                <button (click)="setView(CalendarView.Week)"
+                    [ngClass]="view === CalendarView.Week ? ' btn-purple' : ' btn-outline-purple'">
                     Week
                 </button>
             </div>
-
             <div class="button-grup end">
-                <button  mwlCalendarPreviousView [view]="view" [(viewDate)]="viewDate" (viewDateChange)="closeActiveDay()">
+                <button mwlCalendarPreviousView [view]="view" [(viewDate)]="viewDate"
+                    (viewDateChange)="closeActiveDay()">
                     <i class="fa-solid fa-arrow-left"></i>
                 </button>
-                <button  mwlCalendarToday [(viewDate)]="viewDate">
+                <button mwlCalendarToday [(viewDate)]="viewDate">
                     <i class="fa-solid fa-calendar-check"></i>
                 </button>
-                <button  mwlCalendarNextView [view]="view" [(viewDate)]="viewDate" (viewDateChange)="closeActiveDay()">
+                <button mwlCalendarNextView [view]="view" [(viewDate)]="viewDate" (viewDateChange)="closeActiveDay()">
                     <i class="fa-solid fa-arrow-right"></i>
                 </button>
             </div>
         </div>
     </div>
 </div>
-
 <div [ngSwitch]="view">
-    <mwl-calendar-month-view
-        *ngSwitchCase="CalendarView.Month"
-        [viewDate]="viewDate"
-        [events]="events"
-        [activeDayIsOpen]="activeDayIsOpen"
-        (dayClicked)="onDayClick($event.day)"
+    <mwl-calendar-month-view *ngSwitchCase="CalendarView.Month" [viewDate]="viewDate" [events]="events"
+        [activeDayIsOpen]="activeDayIsOpen" (dayClicked)="onDayClick($event.day)"
         (eventClicked)="onEventClick($event.event)">
     </mwl-calendar-month-view>
-    
-    <mwl-calendar-week-view
-        *ngSwitchCase="CalendarView.Week"
-        [viewDate]="viewDate"
-        [events]="events"
-        [dayStartHour]="13"
-        [dayEndHour]="23"
-        (beforeViewRender)="onBeforeRenderWeek($event)"
-        (hourSegmentClicked)="onSegmentClick($event.date)"
-        (eventClicked)="onEventClick($event.event)">
+    <mwl-calendar-week-view *ngSwitchCase="CalendarView.Week" [viewDate]="viewDate" [events]="events"
+        [dayStartHour]="13" [dayEndHour]="23" (beforeViewRender)="onBeforeRenderWeek($event)"
+        (hourSegmentClicked)="onSegmentClick($event.date)" (eventClicked)="onEventClick($event.event)">
     </mwl-calendar-week-view>
+
 </div>
-
 <ng-template #modalContent let-modal>
-    <div class="modal-header">
+    <div class="header">
         <h5 class="modal-title text-black">{{modalData.schedule.title}}</h5>
-        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+        <button type="button" class="close" (click)="modal.dismiss('Cross click')">X</button>
     </div>
-
     <div class="modal-body">
         <p>Data: <span>{{modalData.schedule.date | date:'dd/MM/yyyy'}}</span></p>
         <p>Horário: <span>{{modalData.schedule.initTime}} ~ {{modalData.schedule.endTime}}</span></p>

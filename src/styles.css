@@ -1,7 +1,8 @@
 :root {
     --purple: #8257e6;
     --white: #FFFFFF;
-    --bg-purple-alpha: rgba(130, 87, 230, .2)
+    --bg-purple-alpha: rgba(130, 87, 230, .2);
+    --dark: rgba(32, 32, 36, 1)
 }
 
 a {
@@ -9,11 +10,11 @@ a {
 }
 
 p, h1, h2, h3, h4, h5, label, small {
-    color: var(--white);
+    color: balck;
 }
 
 body {
-    background-color: rgba(18, 18, 20, 1);
+    background-color: rgb(255, 255, 255);
 }
 
 .navbar {
@@ -33,7 +34,7 @@ body {
 /* Custom Alerts */
 .alert-purple {
     background-color: var(--purple);
-    color: var(--white);
+    color:black;
 }
 
 /* Custom Buttons */
@@ -89,4 +90,54 @@ body {
 
 .cell-available:hover {
     background-color: var(--bg-purple-alpha) !important;
+}
+
+select {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .375rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    outline: none;
+}
+input {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: .375rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    outline: none;
+}
+textarea {
+    min-height: calc(1.5em + .75rem + 2px);
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: .375rem;
+    outline: none;
 }

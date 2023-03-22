@@ -5,16 +5,18 @@ const routes: Routes = [
   {
     path: "",
     pathMatch: "full",
-    redirectTo: "/experts"
-  }, {
-    path: 'experts',
+    redirectTo: "/users"
+  },
+   {
+    path: 'users',
     loadChildren: () => import('./features/experts/experts.module').then(m => m.ExpertsModule)
-  }, {
+  }, 
+  {
     path: 'schedules',
     loadChildren: () => import('./features/schedules/schedules.module').then(m => m.SchedulesModule)
   }, {
     path: "**",
-    redirectTo: "/experts"
+    redirectTo: "/schedules"
   }
 ];
 
