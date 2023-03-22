@@ -1,0 +1,20 @@
+{
+  "experts": [
+    {
+      "name": "Gustavo",
+      "email": "gustavo@gmail.com",
+      "id": 4
+    }
+  ],
+  "schedules": [
+    {
+      "title": "Protegendo sua API RESTful com Spring Security e JWT",
+      "date": "2023-03-22",
+      "initTime": "15:00",
+      "endTime": "16:00",
+      "description": "Nessa aula aprenderemos como utilizar o JWT (Json Web Token) juntamente com o Spring Security para podermos controlar e gerenciar nosso fluxo de autenticação e autorização em nossa API RESTful.",
+      "expertsId": 1,
+      "id": 1
+    }
+  ]
+}
